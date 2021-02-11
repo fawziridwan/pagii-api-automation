@@ -1,0 +1,3 @@
+--timeout 20000
+--recursive
+--reporter reports.html

@@ -1,0 +1,176 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-11T18:39:59.274Z",
+    "end": "2021-02-11T18:40:01.733Z",
+    "duration": 2459,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "940a47e1-0be9-4851-8075-5bb793b619da",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "86403a97-21fd-4991-8bbd-bcd96af51fa5",
+          "title": "Login to Web Pagii CMS",
+          "fullFile": "C:\\code\\pagii_sdet\\api\\test\\login_test.js",
+          "file": "\\api\\test\\login_test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "SC01 - As a HR Role, I should to able to login with valid Credential",
+              "fullTitle": "Login to Web Pagii CMS SC01 - As a HR Role, I should to able to login with valid Credential",
+              "timedOut": false,
+              "duration": 1120,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await page.auth_login(data.valid_credential);\nassert(response.status).to.equal(200);\nassert(response.body.data.message).to.equal(\"Login berhasil\");",
+              "err": {},
+              "uuid": "1463b61d-fb8f-46d0-ae90-b3f0b6aceb36",
+              "parentUUID": "86403a97-21fd-4991-8bbd-bcd96af51fa5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "SC02 - As an Unregistered User, I should not be able to login to Pagii",
+              "fullTitle": "Login to Web Pagii CMS SC02 - As an Unregistered User, I should not be able to login to Pagii",
+              "timedOut": false,
+              "duration": 196,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await page.auth_login(data.unregistered);\nassert(response.status).to.equal(401, response.body.message);",
+              "err": {},
+              "uuid": "34059343-f360-4e7b-8f1d-cc01b00f6b69",
+              "parentUUID": "86403a97-21fd-4991-8bbd-bcd96af51fa5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "SC03 -  As User, I should not be able to login if email is invalid",
+              "fullTitle": "Login to Web Pagii CMS SC03 -  As User, I should not be able to login if email is invalid",
+              "timedOut": false,
+              "duration": 403,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await page.auth_login(data.invalid_email);\nassert(response.status).to.equal(400, response.body.message);",
+              "err": {},
+              "uuid": "6d9dacab-4b20-44a6-8896-37cc8ad4d982",
+              "parentUUID": "86403a97-21fd-4991-8bbd-bcd96af51fa5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "SC04 - As User, I should not be able to login if password is invalid",
+              "fullTitle": "Login to Web Pagii CMS SC04 - As User, I should not be able to login if password is invalid",
+              "timedOut": false,
+              "duration": 218,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await page.auth_login(data.invalid_password);\nassert(response.status).to.equal(401, response.body.message);\nassert(response.body.data.message).to.equal(\"Email atau password salah\");",
+              "err": {},
+              "uuid": "f5f52f38-9c84-4aa5-a4cc-3cc0e5802aed",
+              "parentUUID": "86403a97-21fd-4991-8bbd-bcd96af51fa5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "SC05 - As User, I should not be able to login if this credential is empty",
+              "fullTitle": "Login to Web Pagii CMS SC05 - As User, I should not be able to login if this credential is empty",
+              "timedOut": false,
+              "duration": 476,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await page.auth_login(data.credential_null);\nassert(response.status).to.equal(400, response.body.message);",
+              "err": {},
+              "uuid": "d25a2b71-a799-4634-948a-99513e3b3d54",
+              "parentUUID": "86403a97-21fd-4991-8bbd-bcd96af51fa5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1463b61d-fb8f-46d0-ae90-b3f0b6aceb36",
+            "34059343-f360-4e7b-8f1d-cc01b00f6b69",
+            "6d9dacab-4b20-44a6-8896-37cc8ad4d982",
+            "f5f52f38-9c84-4aa5-a4cc-3cc0e5802aed",
+            "d25a2b71-a799-4634-948a-99513e3b3d54"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2413,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 20000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 20000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}

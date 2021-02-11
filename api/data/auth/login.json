@@ -1,0 +1,22 @@
+{
+    "valid_credential": {
+        "email": "hr@smooets.com",
+        "password": "password"
+    },
+    "unregistered": {
+        "email": "test23@smooets.com",
+        "password": "password"
+    },
+    "invalid_email": {
+        "email": "test23.smooets.com",
+        "password": "password"
+    },
+    "invalid_password": {
+        "email": "test23@smooets.com",
+        "password": "12345678"
+    },
+    "credential_null": {
+        "email": null,
+        "password": null
+    }
+}

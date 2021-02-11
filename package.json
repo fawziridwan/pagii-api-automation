@@ -1,0 +1,22 @@
+{
+  "name": "pagii_testing",
+  "version": "1.0.0",
+  "description": "Script Testing HR Attendance Employement",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha './api/test/*.js' --recursive --timeout 20000 --reporter mochawesome || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.smtapps.net/fawzi.r/pagii_sdet.git"
+  },
+  "keywords": [
+    "pagii-automation-api"
+  ],
+  "author": "Fawzi Ridwan",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.2.1"
+  }
+}
