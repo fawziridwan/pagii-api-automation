@@ -5,9 +5,9 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2021-02-11T18:39:59.274Z",
-    "end": "2021-02-11T18:40:01.733Z",
-    "duration": 2459,
+    "start": "2022-07-01T15:56:57.721Z",
+    "end": "2022-07-01T15:56:59.005Z",
+    "duration": 1284,
     "testsRegistered": 5,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,19 +18,19 @@
   },
   "results": [
     {
-      "uuid": "940a47e1-0be9-4851-8075-5bb793b619da",
+      "uuid": "d02798db-40da-4b3b-9f53-8c721e52b281",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "/Users/fawzi/Documents/Code/pagii_testapi/api/test/login_test.js",
+      "file": "/api/test/login_test.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "86403a97-21fd-4991-8bbd-bcd96af51fa5",
+          "uuid": "ac1ab512-8ec3-4d31-b016-d424e02727d4",
           "title": "Login to Web Pagii CMS",
-          "fullFile": "C:\\code\\pagii_sdet\\api\\test\\login_test.js",
-          "file": "\\api\\test\\login_test.js",
+          "fullFile": "/Users/fawzi/Documents/Code/pagii_testapi/api/test/login_test.js",
+          "file": "/api/test/login_test.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
@@ -38,7 +38,7 @@
               "title": "SC01 - As a HR Role, I should to able to login with valid Credential",
               "fullTitle": "Login to Web Pagii CMS SC01 - As a HR Role, I should to able to login with valid Credential",
               "timedOut": false,
-              "duration": 1120,
+              "duration": 452,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "const response = await page.auth_login(data.valid_credential);\nassert(response.status).to.equal(200);\nassert(response.body.data.message).to.equal(\"Login berhasil\");",
               "err": {},
-              "uuid": "1463b61d-fb8f-46d0-ae90-b3f0b6aceb36",
-              "parentUUID": "86403a97-21fd-4991-8bbd-bcd96af51fa5",
+              "uuid": "21780c80-d9a5-440b-ac50-409d00ad6c54",
+              "parentUUID": "ac1ab512-8ec3-4d31-b016-d424e02727d4",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "SC02 - As an Unregistered User, I should not be able to login to Pagii",
               "fullTitle": "Login to Web Pagii CMS SC02 - As an Unregistered User, I should not be able to login to Pagii",
               "timedOut": false,
-              "duration": 196,
+              "duration": 184,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "const response = await page.auth_login(data.unregistered);\nassert(response.status).to.equal(401, response.body.message);",
               "err": {},
-              "uuid": "34059343-f360-4e7b-8f1d-cc01b00f6b69",
-              "parentUUID": "86403a97-21fd-4991-8bbd-bcd96af51fa5",
+              "uuid": "89d93080-8abd-49b3-9bea-2b3e140a31ff",
+              "parentUUID": "ac1ab512-8ec3-4d31-b016-d424e02727d4",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "SC03 -  As User, I should not be able to login if email is invalid",
               "fullTitle": "Login to Web Pagii CMS SC03 -  As User, I should not be able to login if email is invalid",
               "timedOut": false,
-              "duration": 403,
+              "duration": 199,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "const response = await page.auth_login(data.invalid_email);\nassert(response.status).to.equal(400, response.body.message);",
               "err": {},
-              "uuid": "6d9dacab-4b20-44a6-8896-37cc8ad4d982",
-              "parentUUID": "86403a97-21fd-4991-8bbd-bcd96af51fa5",
+              "uuid": "430885d0-79b9-4fe9-9435-6415a59a0708",
+              "parentUUID": "ac1ab512-8ec3-4d31-b016-d424e02727d4",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "SC04 - As User, I should not be able to login if password is invalid",
               "fullTitle": "Login to Web Pagii CMS SC04 - As User, I should not be able to login if password is invalid",
               "timedOut": false,
-              "duration": 218,
+              "duration": 235,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -101,8 +101,8 @@
               "context": null,
               "code": "const response = await page.auth_login(data.invalid_password);\nassert(response.status).to.equal(401, response.body.message);\nassert(response.body.data.message).to.equal(\"Email atau password salah\");",
               "err": {},
-              "uuid": "f5f52f38-9c84-4aa5-a4cc-3cc0e5802aed",
-              "parentUUID": "86403a97-21fd-4991-8bbd-bcd96af51fa5",
+              "uuid": "58f639b3-f906-4e3b-9cd3-bf864ab3a21c",
+              "parentUUID": "ac1ab512-8ec3-4d31-b016-d424e02727d4",
               "isHook": false,
               "skipped": false
             },
@@ -110,7 +110,7 @@
               "title": "SC05 - As User, I should not be able to login if this credential is empty",
               "fullTitle": "Login to Web Pagii CMS SC05 - As User, I should not be able to login if this credential is empty",
               "timedOut": false,
-              "duration": 476,
+              "duration": 203,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -119,24 +119,24 @@
               "context": null,
               "code": "const response = await page.auth_login(data.credential_null);\nassert(response.status).to.equal(400, response.body.message);",
               "err": {},
-              "uuid": "d25a2b71-a799-4634-948a-99513e3b3d54",
-              "parentUUID": "86403a97-21fd-4991-8bbd-bcd96af51fa5",
+              "uuid": "88fe4d66-e67a-4e88-82b9-80d9fe2ee2e4",
+              "parentUUID": "ac1ab512-8ec3-4d31-b016-d424e02727d4",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1463b61d-fb8f-46d0-ae90-b3f0b6aceb36",
-            "34059343-f360-4e7b-8f1d-cc01b00f6b69",
-            "6d9dacab-4b20-44a6-8896-37cc8ad4d982",
-            "f5f52f38-9c84-4aa5-a4cc-3cc0e5802aed",
-            "d25a2b71-a799-4634-948a-99513e3b3d54"
+            "21780c80-d9a5-440b-ac50-409d00ad6c54",
+            "89d93080-8abd-49b3-9bea-2b3e140a31ff",
+            "430885d0-79b9-4fe9-9435-6415a59a0708",
+            "58f639b3-f906-4e3b-9cd3-bf864ab3a21c",
+            "88fe4d66-e67a-4e88-82b9-80d9fe2ee2e4"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2413,
+          "duration": 1273,
           "root": false,
           "rootEmpty": false,
           "_timeout": 20000
@@ -154,7 +154,7 @@
   ],
   "meta": {
     "mocha": {
-      "version": "8.2.1"
+      "version": "10.0.0"
     },
     "mochawesome": {
       "options": {
@@ -166,11 +166,11 @@
         "useInlineDiffs": false,
         "code": true
       },
-      "version": "6.2.1"
+      "version": "7.1.3"
     },
     "marge": {
       "options": null,
-      "version": "5.1.0"
+      "version": "6.2.0"
     }
   }
 }
